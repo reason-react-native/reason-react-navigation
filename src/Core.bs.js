@@ -1,6 +1,6 @@
 'use strict';
 
-var Caml_option = require("bs-platform/lib/js/caml_option.js");
+var Caml_option = require("rescript/lib/js/caml_option.js");
 
 function NavigationHelpersCommon(M) {
   var navigateByKey = function (key, params, param) {
@@ -18,7 +18,7 @@ function NavigationHelpersCommon(M) {
       name: name
     };
     if (key !== undefined) {
-      tmp.key = Caml_option.valFromOption(key);
+      tmp.key = key;
     }
     if (params !== undefined) {
       tmp.params = Caml_option.valFromOption(params);
@@ -52,7 +52,7 @@ function NavigationScreenProp(M) {
       name: name
     };
     if (key !== undefined) {
-      tmp.key = Caml_option.valFromOption(key);
+      tmp.key = key;
     }
     if (params !== undefined) {
       tmp.params = Caml_option.valFromOption(params);
